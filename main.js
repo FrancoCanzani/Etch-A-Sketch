@@ -199,15 +199,6 @@ randomColorBtn.addEventListener("click", function(){
     bgColor = colorArray[Math.floor(Math.random() * colorArray.length)] 
     return(squareColor(bgColor))
 });
-        
-(function() {
-  // Bind Click event to the drop down navigation button
-  document.querySelector('#nav-button').addEventListener('click', function() {
-    /*  Toggle the CSS closed class which reduces the height of the UL thus 
-        hiding all LI apart from the first */
-    this.parentNode.parentNode.classList.toggle('closed')
-  }, false);
-})();
 
 sixteenBtn.addEventListener("click", function(){
   return(squaresCreator(16, 256), squareColor(bgColor))
