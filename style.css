@@ -49,19 +49,14 @@ button:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
-nav .drop-down {
-  overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
-  height: 172px; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
-  width: 130px;
-  line-height: 30px;
-  text-align: center;
-  -webkit-transition: height 0.3s ease;
-          transition: height 0.3s ease;
+/* Dropdown Button */
+.dropbtn {
+  height: 42px;
+  width: 90px;
   background-color: #fff;
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  padding: 0;
   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   color: black;
   cursor: pointer;
@@ -72,49 +67,54 @@ nav .drop-down {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  touch-action: manipulation;
-  list-style: none;
+  margin-right: 15px;
 }
 
-nav .drop-down.closed {
-  /*  When toggled via jQuery this class will reduce the height of the ul which inconjuction
-      with overflow: hidden set on the ul will hide all list items apart from the first */
-  /* current li height 38px + 5px border */
-  height: 38px;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-nav .drop-down li {
-  border-bottom: 2px solid black;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 90px;
+  z-index: 1;
+  text-align: center;
 }
 
-nav .drop-down li a {
-  display: block;
+/* Links inside the dropdown */
+.dropdown-content a {
   color: black;
+  padding: 10px 14px;
   text-decoration: none;
-  padding: 6px; /* Larger touch target area */
+  display: block;
+  border-bottom: 1px solid black;
 }
 
-nav .drop-down li a:hover {
+.dropdown-content a:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
-nav .drop-down li a:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}
-
-nav .drop-down li:first-child a:after {
-  content: "\25BC";
-  float: right;
-  margin-left: -30px; /* Excessive -margin to bring link text back to center */
-  margin-right: 5px;
-}
-
-nav .drop-down:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
-}
-
-nav .drop-down:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  color: black;
+  cursor: pointer;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  margin-right: 15px;
 }

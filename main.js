@@ -24,7 +24,7 @@ function squaresCreator(numSquares, totalSquares) {
     div.classList.add('square');
   }
 }
-xddxdxd
+
 
 squaresCreator(16, 256);
 
